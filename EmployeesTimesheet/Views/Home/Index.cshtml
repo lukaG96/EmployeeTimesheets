@@ -1,0 +1,35 @@
+﻿<div class="jumbotron">
+    @HttpContext.Current.User.Identity.Name
+
+
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("Logout", "Auth", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+        }
+    }
+    <h1>Emploees Timesheet</h1>
+    <p class="lead">
+        Time is money.
+        For some companies it's even something more.
+    </p>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>Say goodbye to dull, boring timesheets: know how projects progress and projects and stay updated on how the team spends its time. Keep track on your project's status and never miss a deadline again.</p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>Say goodbye to dull, boring timesheets: know how projects progress and projects and stay updated on how the team spends its time. Keep track on your project's status and never miss a deadline again.</p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>Say goodbye to dull, boring timesheets: know how projects progress and projects and stay updated on how the team spends its time. Keep track on your project's status and never miss a deadline again.</p>
+
+    </div>
+</div>

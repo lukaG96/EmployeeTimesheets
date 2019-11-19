@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BusinessLogic.BusinessObjects.ProjectViewModel>
+
+@{
+    ViewBag.Title = "DeletedProjects";
+}
+
+<h2>Deleted Projects</h2>
+
+<hr />
+<div class="col-md-12 text-right">
+    <p>
+        @Html.ActionLink("Go To Active Projects", "GetTlProjects", null, new { @class = "btn btn-primary" })
+    </p>
+</div>
+<table class="table table-responsive table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectType)
+            </th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </th>
+            }
+                <th></th>
+            </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectType)
+            </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+            }
+
+            <td class="text-center">
+                <button class="btn btn-success btnReturnToActive" id="@item.Id">Return To Active</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <script src="~/App/project/project.deleted.js"></script>
+}
