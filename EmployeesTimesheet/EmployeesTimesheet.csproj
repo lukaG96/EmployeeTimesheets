@@ -205,7 +205,7 @@
     <Content Include="Content\dateTimePicker\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\dateTimePicker\bootstrap.min.css" />
     <Content Include="Content\dateTimePicker\jquery.min.js" />
-    <Content Include="Content\fa-fa-font.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\select2.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -233,6 +233,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include=".editorconfig" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
